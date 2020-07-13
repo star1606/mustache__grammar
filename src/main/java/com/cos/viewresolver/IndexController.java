@@ -32,10 +32,31 @@ public class IndexController {
 		
 		return "index";
 	}
-
+	
+	
+	
+	
+	
+	@GetMapping("/model")
+	public String modelData(Model model){ // DI하기
+		Member member = Member.builder()
+			.id(1)
+			.username("Lee")
+			.phone("01022224567")
+			.build();
+		
+		model.addAttribute("member", member);
+		
+	
+		return "modelData";
+	}
+	
+	
+	
+	
 	
 	@GetMapping("/model/data")
-	public String modelData(Model model){ // DI하기
+	public String modelArray(Model model){ // DI하기
 		Member member1 = Member.builder()
 			.id(1)
 			.username("sasar")
