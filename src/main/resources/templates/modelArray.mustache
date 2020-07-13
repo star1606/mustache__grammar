@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h2>{{members}}</h2>
+	<hr>
+	
+	{{members.0.id}}
+	<hr>
+	
+	
+	{{#members}}
+		{{id}}
+		{{username}}
+		{{phone}}
+	{{/members}}
+	
+	
+	<hr>
+	
+	{{user}}
+	
+	<hr>
+	{{#user}}
+		<h2>유저가 있습니다.</h2>
+	{{/user}}
+	
+	
+	{{^user}}
+		<h2>유저가 없습니다.</h2>
+	{{/user}}
+	 
+	
+</body>
+</html>
